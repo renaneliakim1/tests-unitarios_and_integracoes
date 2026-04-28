@@ -1,0 +1,7 @@
+const produtos = [
+  { id: 1, nome: "Notebook", preco: 3500 },
+  { id: 2, nome: "Mouse", preco: 150 },
+];
+
+
+module.exports = { produtos };
