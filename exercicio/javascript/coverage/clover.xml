@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1777342141571" clover="3.2.0">
+  <project timestamp="1777342141572" name="All files">
+    <metrics statements="17" coveredstatements="17" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2" elements="37" coveredelements="37" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
+    <file name="calculadora_imc.js" path="C:\Users\user\Downloads\tests-unitarios\exercicio\javascript\calculadora_imc.js">
+      <metrics statements="17" coveredstatements="17" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2"/>
+      <line num="7" count="16" type="cond" truecount="4" falsecount="0"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="12" count="12" type="cond" truecount="4" falsecount="0"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="17" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="22" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="4" type="stmt"/>
+      <line num="31" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="3" type="stmt"/>
+      <line num="35" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="3" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

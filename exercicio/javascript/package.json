@@ -1,0 +1,21 @@
+{
+  "name": "exercicio-calculadora-imc",
+  "version": "1.0.0",
+  "description": "Exercício: Calculadora de IMC com testes unitários",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "lines": 100,
+        "branches": 100,
+        "functions": 100,
+        "statements": 100
+      }
+    }
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
