@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1777492253075" clover="3.2.0">
+  <project timestamp="1777492253075" name="All files">
+    <metrics statements="16" coveredstatements="13" conditionals="19" coveredconditionals="16" methods="2" coveredmethods="2" elements="37" coveredelements="31" complexity="0" loc="16" ncloc="16" packages="1" files="1" classes="1"/>
+    <file name="sistemaAlunos.js" path="C:\Users\aluno\Pictures\tests unitarios\planos_tests\sistemaAlunos.js">
+      <metrics statements="16" coveredstatements="13" conditionals="19" coveredconditionals="16" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="4" type="cond" truecount="3" falsecount="1"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="1"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

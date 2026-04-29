@@ -1,0 +1,614 @@
+<!DOCTYPE html><html><head>
+      <title>aula-plano-testes</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\NUTEC_ALUNO2\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.24-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="plano-de-testes-de-software">Plano de Testes de Software </h1>
+<hr>
+<h2 id="1-definição-e-objetivos">1. Definição e Objetivos </h2>
+<p>O <strong>Plano de Testes</strong> é um documento estratégico que descreve o escopo (o que será testado), a abordagem (como será testado), os recursos e o cronograma das atividades de teste. Seu objetivo principal é fornecer um roteiro claro para a execução do controle de qualidade em um projeto de software.</p>
+<p><strong>Por que o Plano de Testes é tão importante?</strong></p>
+<ul>
+<li><strong>Guia Definitivo:</strong> Ele responde às perguntas fundamentais: <em>O que testar? Como testar? Quando testar? Quem será responsável?</em></li>
+<li><strong>Documento Vivo:</strong> O Plano de Testes não deve ser escrito e esquecido. Ele deve evoluir junto com o software. Se os requisitos mudarem, o plano também deve ser atualizado.</li>
+<li><strong>Garantia de Qualidade Sustentável:</strong> Ajuda a prevenir defeitos antes que fiquem muito caros para serem corrigidos, garantindo a entrega de um produto confiável.</li>
+<li><strong>Alinhamento com Stakeholders (Partes Interessadas):</strong> Garante que desenvolvedores, QAs (Analistas de Qualidade), Product Owners (POs - Donos do Produto), gerentes e clientes tenham clareza sobre os critérios de aceitação (o que precisa funcionar para o software ser aprovado).</li>
+</ul>
+<hr>
+<h2 id="2-conteúdo-essencial-baseado-na-norma-isoiecieee-29119-3">2. Conteúdo Essencial (Baseado na norma ISO/IEC/IEEE 29119-3) </h2>
+<p>Um plano de testes robusto deve seguir padrões da indústria, como a norma ISO 29119, que define como documentar testes de software. Abaixo, exploramos os componentes essenciais:</p>
+<h3 id="21-visão-geral-e-escopo">2.1 Visão Geral e Escopo </h3>
+<p>Define claramente os limites do que será testado.</p>
+<ul>
+<li><strong>O que será testado (In-Scope):</strong> Quais módulos, funcionalidades, APIs (interfaces de comunicação entre sistemas) ou telas serão validados.</li>
+<li><strong>O que NÃO será testado (Out-of-Scope):</strong> Essencial para gerenciar as expectativas. Por exemplo, você pode decidir que testes de estresse (testar com muitos usuários ao mesmo tempo) não farão parte desta etapa.</li>
+<li><strong>Dependências Externas:</strong> Identificação de serviços de terceiros que afetam o teste (ex: um sistema externo de pagamento ou envio de SMS).</li>
+</ul>
+<h3 id="22-estratégia-de-teste">2.2 Estratégia de Teste </h3>
+<p>A espinha dorsal de como os testes serão feitos na prática.</p>
+<ul>
+<li><strong>Tipos de Teste:</strong> Definição se os testes focarão em aspectos funcionais (o software faz o que deveria fazer?), testes de regressão (uma nova mudança quebrou algo que já funcionava?) ou não-funcionais (como performance, segurança ou facilidade de uso).</li>
+<li><strong>Níveis de Teste:</strong> As etapas de validação: começam pelo Teste Unitário (testar partes isoladas do código), passam para a Integração (testar se as partes se comunicam bem) e vão até o E2E - End To End (teste ponta a ponta, simulando um usuário real do início ao fim).</li>
+<li><strong>Manual vs. Automatizado:</strong> Definir o que será feito por um testador humano (testes manuais) e o que será feito por scripts de código (testes automatizados).</li>
+</ul>
+<h3 id="23-equipe-e-responsabilidades">2.3 Equipe e Responsabilidades </h3>
+<p>Define quem faz o quê no ciclo de validação.</p>
+<ul>
+<li><strong>Papéis:</strong> Quem planeja e testa (QA), quem corrige os defeitos (Desenvolvedor) e quem dá o aceite final (Product Owner).</li>
+<li><strong>Matriz de Responsabilidades (Ex: RACI):</strong> Uma tabela que define quem é o Responsável por executar, quem é a Autoridade para aprovar, quem deve ser Consultado e quem deve ser Informado sobre os testes.</li>
+</ul>
+<h3 id="24-riscos-e-contingências">2.4 Riscos e Contingências </h3>
+<p>Todo projeto possui riscos. Prever problemas evita o pânico.</p>
+<ul>
+<li><strong>Exemplos de Riscos:</strong> O servidor de testes cair frequentemente, uma ferramenta parar de funcionar ou o prazo ficar muito curto.</li>
+<li><strong>Planos de Contingência ("Plano B"):</strong> O que a equipe fará se o risco acontecer? Por exemplo: se a API externa cair, podemos usar "Mocks" (simulações falsas da API) para continuar testando.</li>
+</ul>
+<h3 id="25-cronograma-e-estimativas">2.5 Cronograma e Estimativas </h3>
+<p>A previsão do tempo e dos recursos.</p>
+<ul>
+<li><strong>Fases e Etapas:</strong> Definir quando o plano será escrito, quando os testes serão desenvolvidos e quando serão executados.</li>
+<li><strong>Estimativas de Tempo:</strong> Quantas horas ou dias a equipe precisará para finalizar os testes sem atrasar a entrega.</li>
+</ul>
+<h3 id="26-ferramentas-e-ambientes-de-teste">2.6 Ferramentas e Ambientes de Teste </h3>
+<p>Onde e com o que os testes serão feitos.</p>
+<ul>
+<li><strong>Ambientes de Teste:</strong> Os testes nunca devem ser feitos no banco de dados real dos clientes (Produção). Eles são feitos em ambientes separados: "Local" (no computador do desenvolvedor) e "Staging/Homologação" (um servidor de testes que imita a Produção).</li>
+<li><strong>Massa de Teste (Dados de Teste):</strong> Dados falsos usados para testar (ex: e-mails fictícios). Eles devem seguir leis de privacidade, como a LGPD, garantindo que nenhum dado real de cliente seja exposto.</li>
+</ul>
+<hr>
+<h2 id="3-arquitetura-e-os-níveis-de-escopo">3. Arquitetura e os Níveis de Escopo </h2>
+<p>Planos de teste podem ser divididos dependendo do tamanho do projeto:</p>
+<h3 id="31-plano-master-plano-de-testes-mestre---ptm">3.1 Plano Master (Plano de Testes Mestre - PTM) </h3>
+<ul>
+<li>Oferece uma visão global. É usado quando o sistema é muito grande (ex: tem um aplicativo mobile, um site web e vários serviços na nuvem ao mesmo tempo). Ele documenta as regras gerais de como tudo será testado em conjunto.</li>
+</ul>
+<h3 id="32-planos-específicos">3.2 Planos Específicos </h3>
+<p>São documentos menores e focados em partes específicas:</p>
+<ul>
+<li><strong>Plano de Teste de Unidade:</strong> Focado apenas no código dos desenvolvedores.</li>
+<li><strong>Plano de Teste de Integração (APIs):</strong> Focado em testar a comunicação entre os sistemas e como eles lidam com erros.</li>
+<li><strong>Plano de Segurança e Performance:</strong> Focado apenas em tentar invadir o sistema (Pen-Test) ou derrubá-lo com muitos acessos (Stress Test).</li>
+</ul>
+<hr>
+<h2 id="4-o-impacto-das-metodologias-de-trabalho-ágil-vs-tradicional">4. O Impacto das Metodologias de Trabalho (Ágil vs Tradicional) </h2>
+<p>A forma como a equipe de tecnologia trabalha muda completamente o andamento dos testes.</p>
+<h3 id="41-metodologia-tradicional-cascatawaterfall">4.1 Metodologia Tradicional (Cascata/Waterfall) </h3>
+<ul>
+<li>O plano é escrito de forma extensa e muito detalhada meses antes de o código começar a ser feito.</li>
+<li>Os testes só ocorrem no final do projeto. Isso é arriscado, pois descobrir um defeito grave no final custa muito caro e atrasa o lançamento.</li>
+</ul>
+<h3 id="42-metodologia-ágil-scrum--kanban">4.2 Metodologia Ágil (Scrum / Kanban) </h3>
+<ul>
+<li>Os planos são curtos, diretos e atualizados constantemente (geralmente a cada 1 ou 2 semanas, nas chamadas <em>Sprints</em>).</li>
+<li><strong>Testes desde o início ("Shift-Left Testing"):</strong> O QA trabalha junto com a equipe desde o planejamento da funcionalidade, evitando que erros sejam sequer codificados.</li>
+<li><strong>Feedback Rápido:</strong> Qualquer erro é descoberto em poucas horas através de testes automatizados executados por robôs (CI/CD - Integração Contínua), impedindo que o problema chegue ao cliente.</li>
+</ul>
+<hr>
+<h2 id="5-técnicas-de-teste-como-criar-os-cenários">5. Técnicas de Teste (Como criar os cenários) </h2>
+<p>São técnicas mentais para saber exatamente o que testar sem perder tempo com milhares de tentativas inúteis.</p>
+<h3 id="51-teste-de-caixa-preta-black-box">5.1 Teste de Caixa Preta (Black-Box) </h3>
+<ul>
+<li><strong>O Enfoque:</strong> O testador não olha para o código-fonte. Ele apenas interage com a tela ou sistema como um usuário normal ("Coloco esse dado aqui, clico aqui, e vejo o que acontece").</li>
+</ul>
+<h3 id="52-teste-de-caixa-branca-white-box">5.2 Teste de Caixa Branca (White-Box) </h3>
+<ul>
+<li><strong>O Enfoque:</strong> O testador tem acesso ao código-fonte e testa a lógica interna (os caminhos matemáticos e os "IFs" e "ELSEs" do código). É focado em garantir que todas as linhas de código foram validadas.</li>
+</ul>
+<h3 id="53-partição-de-equivalência">5.3 Partição de Equivalência </h3>
+<ul>
+<li><strong>O Enfoque:</strong> Evita testar todas as possibilidades do mundo dividindo os dados em "grupos equivalentes".</li>
+<li><strong>Exemplo prático:</strong> Se um sistema só aceita idades entre 10 e 50 anos, você não precisa testar os números 11, 12, 13, 14... Basta criar 3 grupos: um número menor que 10 (rejeitado), um número entre 10 e 50 (aceito) e um número maior que 50 (rejeitado). Você faz 3 testes em vez de dezenas.</li>
+</ul>
+<h3 id="54-análise-do-valor-limite-bva---boundary-value-analysis">5.4 Análise do Valor Limite (BVA - Boundary Value Analysis) </h3>
+<ul>
+<li><strong>O Enfoque:</strong> A maioria dos erros de programação acontece nos "limites" das regras. Essa técnica foca em testar exatamente as bordas numéricas.</li>
+<li><strong>Exemplo prático:</strong> Usando a regra de 10 a 50 anos, testaremos as fronteiras exatas: 9 (falha), 10 (sucesso), 50 (sucesso) e 51 (falha).</li>
+</ul>
+<h3 id="55-teste-exploratório-ad-hoc">5.5 Teste Exploratório (Ad-hoc) </h3>
+<ul>
+<li><strong>O Enfoque:</strong> Testar o sistema livremente, sem um roteiro engessado, usando a intuição, criatividade e a experiência do testador para achar erros onde os testes normais e automatizados não alcançam.</li>
+</ul>
+<hr>
+<h2 id="6-ferramentas-comuns-no-mercado">6. Ferramentas Comuns no Mercado </h2>
+<ul>
+<li><strong>Documentação (Onde escrever o plano de testes):</strong> Jira/Confluence, Notion, X-Ray, <a href="http://Qase.io">Qase.io</a>.</li>
+<li><strong>Automação de Testes (Para escrever os scripts lógicos):</strong> Jest (para JavaScript), Cypress ou Playwright (para simular cliques na web de forma automática), Postman (para testar comunicação de APIs).</li>
+</ul>
+<hr>
+<h2 id="7-critérios-de-qualidade-dor-e-dod">7. Critérios de Qualidade (DoR e DoD) </h2>
+<p>Em equipes profissionais, um sistema não vai para os usuários reais "só porque achamos que está bom". Precisamos de aprovações formais (portões de qualidade):</p>
+<h3 id="71-critérios-de-entrada-dor---definition-of-ready">7.1 Critérios de Entrada (DoR - Definition of Ready) </h3>
+<ul>
+<li>O que precisamos ter <strong>ANTES</strong> de começar a testar? (Exemplo: O código deve estar pronto, o ambiente de testes deve estar online sem quedas e o design da tela deve ter sido aprovado).</li>
+</ul>
+<h3 id="72-critérios-de-saídaconclusão-dod---definition-of-done">7.2 Critérios de Saída/Conclusão (DoD - Definition of Done) </h3>
+<ul>
+<li>Quando podemos dizer que <strong>"Terminamos"</strong> os testes? (Exemplo: 100% dos testes críticos passaram com sucesso, e não existe nenhum bug impeditivo aberto na plataforma).</li>
+</ul>
+<h3 id="73-kpis-métricas-de-desempenho">7.3 KPIs (Métricas de Desempenho) </h3>
+<ul>
+<li><strong>Cobertura de Código (Code Coverage):</strong> Qual porcentagem do código dos programadores foi efetivamente testada (um bom número é acima de 80%).</li>
+<li><strong>Matriz de Rastreabilidade:</strong> Uma tabela que comprova que todos os requisitos pedidos pelo cliente têm pelo menos um teste feito garantindo seu funcionamento.</li>
+</ul>
+<h3 id="74-gestão-de-defeitos-bugs">7.4 Gestão de Defeitos (Bugs) </h3>
+<p>Quando achamos um bug, precisamos classificá-lo para que a equipe saiba a urgência:</p>
+<ul>
+<li><strong>Severidade (O impacto técnico):</strong> Quão grave é o erro para o sistema? (Ex: O sistema travar completamente no fechamento do carrinho de compras tem Severidade Altíssima. Um botão ligeiramente torto tem Severidade Baixa).</li>
+<li><strong>Prioridade (O impacto no negócio):</strong> Quão rápido precisa ser corrigido pela equipe? (Ex: Um palavrão escrito na página inicial da empresa pode ter Severidade técnica Baixa (não quebra o sistema), mas Prioridade Extrema (afeta a reputação da empresa e deve ser corrigido imediatamente)).</li>
+</ul>
+<hr>
+<h2 id="8-exemplo-prático-calculadora-em-javascript">8. Exemplo Prático: Calculadora em JavaScript </h2>
+<p>Para não ficarmos apenas na teoria, vamos aplicar os conceitos acima em um pequeno módulo de sistema: uma <strong>Calculadora Digital</strong>.</p>
+<h3 id="-81-o-código-da-aplicação-a-classe-lógica">⚙ 8.1 O Código da Aplicação (A Classe Lógica) </h3>
+<p>Abaixo temos a classe <code>Calculadora</code> em JavaScript. É esse código que vamos submeter aos testes mapeados na seção seguinte.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Calculadora</span> <span class="token punctuation">{</span>
+    <span class="token function">somar</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">subtrair</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">multiplicar</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">dividir</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Validação de tipo de dados (Se não for número, dispara erro)</span>
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> a <span class="token operator">!==</span> <span class="token string">'number'</span> <span class="token operator">||</span> <span class="token keyword keyword-typeof">typeof</span> b <span class="token operator">!==</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">"Parâmetros inválidos. O sistema aceita apenas números inteiros."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// Validação de regra de negócio (Divisão por zero)</span>
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>b <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"A divisão por zero não é permitida."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">/</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="82-aplicando-as-técnicas-de-teste-na-calculadora">8.2 Aplicando as Técnicas de Teste na Calculadora </h3>
+<ul>
+<li><strong>Caminho Feliz (Happy Path):</strong> Testar a rotina de sucesso, onde o usuário envia dados normais e tudo dá certo.
+<ul>
+<li>Exemplo: Somar <code>2 + 2</code> e receber <code>4</code>.</li>
+</ul>
+</li>
+<li><strong>Caminho Triste (Sad Path / Caminhos Negativos):</strong> Testar situações imprevisíveis ou incorretas para ver se o sistema sabe se defender sem quebrar.
+<ul>
+<li>Exemplo: Tentar dividir <code>10</code> por <code>0</code> (Zero). O sistema deve nos avisar de forma controlada que isso é inválido, e não simplesmente travar.</li>
+<li>Exemplo: Tentar enviar uma letra (ex: <code>"Dois"</code>) em vez de um número. O sistema deve rejeitar a entrada exigindo um número.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Aplicando a Teoria (Seção 5) na Prática:</strong></p>
+<ul>
+<li>Ao testar a divisão por zero, estamos usando a <strong>Análise de Valor Limite (BVA)</strong>, pois o zero é uma fronteira matemática crítica.</li>
+<li>Ao enviar letras ("Dois") em vez de números, estamos aplicando a <strong>Partição de Equivalência</strong>, validando o grupo inteiro de "dados de tipos inválidos" sem precisar testar todas as letras do alfabeto.</li>
+</ul>
+<h3 id="-83-automação-dos-testes-utilizando-jest">🤖 8.3 Automação dos Testes (Utilizando Jest) </h3>
+<p>Com o plano de testes definido (que veremos na Seção 9), a equipe de automação escreve os scripts em Jest para executar as validações continuamente. Repare como cada teste reflete diretamente um ID (CT-01, CT-02...) da nossa tabela de testes.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Pré-requisito: npm install -D jest</span>
+<span class="token comment">// Comando para rodar: npm run test</span>
+
+<span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">Calculadora</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./calculadora'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"Plano de Testes - Calculadora"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-let">let</span> calc<span class="token punctuation">;</span>
+
+    <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Preparação: Instancia a calculadora antes de cada teste</span>
+        calc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Calculadora</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-01 - Validar a soma de dois números inteiros positivos"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span><span class="token method function property-access">somar</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-02 - Validar a subtração com resultado positivo"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span><span class="token method function property-access">subtrair</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-03 - Validar a multiplicação de dois números inteiros"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span><span class="token method function property-access">multiplicar</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-04 - Validar a divisão exata entre dois números"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span><span class="token method function property-access">dividir</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-05 - Validar o erro ao tentar dividir por zero"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> calc<span class="token punctuation">.</span><span class="token method function property-access">dividir</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toThrow</span><span class="token punctuation">(</span><span class="token string">"A divisão por zero não é permitida."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-06 - Validar a proteção contra tipos de dados não numéricos"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Simulando a falha: O teste exige uma mensagem exata, mas o código retorna outra (TypeError).</span>
+        <span class="token comment">// Isso fará o teste falhar, conforme apontado no relatório da Seção 9.</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> calc<span class="token punctuation">.</span><span class="token method function property-access">dividir</span><span class="token punctuation">(</span><span class="token string">"Dois"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toThrow</span><span class="token punctuation">(</span><span class="token string">"Ambos os parâmetros devem ser números."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    test<span class="token punctuation">.</span><span class="token method function property-access">skip</span><span class="token punctuation">(</span><span class="token string">"CT-07 - Validar a proteção ao enviar um valor nulo"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Teste bloqueado: Utilizamos o .skip() do Jest para ignorar este teste por enquanto.</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> calc<span class="token punctuation">.</span><span class="token method function property-access">dividir</span><span class="token punctuation">(</span><span class="token keyword null nil keyword-null">null</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toThrow</span><span class="token punctuation">(</span><span class="token known-class-name class-name">TypeError</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="9-exemplo-prático-plano-de-testes-simplificado-e-tabela-de-casos-de-teste">9. Exemplo Prático: Plano de Testes Simplificado e Tabela de Casos de Teste </h2>
+<p>Abaixo, apresentamos um exemplo de como estruturar um <strong>Plano de Testes</strong> de forma simples, clara e aderente às normas de qualidade de software (como a ISO/IEC/IEEE 29119). Este documento serve como um guia direto para a execução dos testes na nossa classe <code>Calculadora</code> construída na seção anterior.</p>
+<hr>
+<h3 id="-plano-de-testes---projeto-calculadora-versão-10">📄 PLANO DE TESTES - PROJETO CALCULADORA (Versão 1.0) </h3>
+<p><strong>Projeto:</strong> Módulo de Calculadora Aritmética (JavaScript)<br>
+<strong>Responsável (QA):</strong> [Nome do Analista de Testes]<br>
+<strong>Data:</strong> [Data Atual]</p>
+<h4 id="i-escopo-dos-testes">I. Escopo dos Testes </h4>
+<ul>
+<li><strong>O que será testado (In-Scope):</strong> As quatro operações matemáticas básicas (Somar, Subtrair, Multiplicar, Dividir) e o tratamento de erros em caso de divisão por zero ou inserção de dados não-numéricos (letras, nulos).</li>
+<li><strong>O que não será testado (Out-of-Scope):</strong> Interface gráfica (Front-end), performance para grandes volumes de dados e integração com banco de dados.</li>
+</ul>
+<h4 id="ii-estratégia-de-testes">II. Estratégia de Testes </h4>
+<ul>
+<li><strong>Nível de Teste:</strong> Teste de Unidade (Unitário).</li>
+<li><strong>Tipo de Teste:</strong> Funcional (Caixa Preta) e Estrutural (Caixa Branca focada em exceções).</li>
+<li><strong>Ferramenta:</strong> Automação utilizando o framework <strong>Jest</strong> (Node.js).</li>
+</ul>
+<h4 id="iii-critérios-de-aceitação-e-conclusão">III. Critérios de Aceitação e Conclusão </h4>
+<ul>
+<li><strong>Critério de Início:</strong> O código deve compilar sem erros de sintaxe e o ambiente local deve estar configurado.</li>
+<li><strong>Critério de Conclusão (DoD):</strong> 100% dos Casos de Teste Críticos (prioridade Alta) devem estar com o status <strong>Passou</strong>. Nenhum defeito bloqueante pode estar aberto no repositório.</li>
+</ul>
+<hr>
+<h4 id="iv-tabela-de-especificação-e-execução-de-casos-de-teste-cts">IV. Tabela de Especificação e Execução de Casos de Teste (CTs) </h4>
+<p>A tabela a seguir descreve os testes planejados. Foi adicionada a coluna <strong>"Resultado da Execução"</strong> para registrar o status real após a rodada de testes: <strong>Passou (Passed)</strong>, <strong>Falhou (Failed)</strong> ou <strong>Bloqueado (Blocked)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID do Caso</th>
+<th style="text-align:left">Descrição / Objetivo</th>
+<th style="text-align:left">Dados de Entrada</th>
+<th style="text-align:left">Resultado Esperado</th>
+<th style="text-align:left">Resultado da Execução</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>CT-01</strong></td>
+<td style="text-align:left">Validar a soma de dois números inteiros positivos (Caminho Feliz).</td>
+<td style="text-align:left"><code>a = 2</code>, <code>b = 2</code></td>
+<td style="text-align:left">O sistema deve retornar <code>4</code>.</td>
+<td style="text-align:left">✅ <strong>Passou</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-02</strong></td>
+<td style="text-align:left">Validar a subtração com resultado positivo.</td>
+<td style="text-align:left"><code>a = 5</code>, <code>b = 3</code></td>
+<td style="text-align:left">O sistema deve retornar <code>2</code>.</td>
+<td style="text-align:left">✅ <strong>Passou</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-03</strong></td>
+<td style="text-align:left">Validar a multiplicação de dois números inteiros.</td>
+<td style="text-align:left"><code>a = 3</code>, <code>b = 4</code></td>
+<td style="text-align:left">O sistema deve retornar <code>12</code>.</td>
+<td style="text-align:left">✅ <strong>Passou</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-04</strong></td>
+<td style="text-align:left">Validar a divisão exata entre dois números.</td>
+<td style="text-align:left"><code>a = 10</code>, <code>b = 2</code></td>
+<td style="text-align:left">O sistema deve retornar <code>5</code>.</td>
+<td style="text-align:left">✅ <strong>Passou</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-05</strong></td>
+<td style="text-align:left">Validar o erro ao tentar dividir por zero (Caminho Triste / Valor Limite).</td>
+<td style="text-align:left"><code>a = 10</code>, <code>b = 0</code></td>
+<td style="text-align:left">O sistema deve lançar um erro informando que divisão por zero não é permitida.</td>
+<td style="text-align:left">✅ <strong>Passou</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-06</strong></td>
+<td style="text-align:left">Validar a proteção contra tipos de dados não numéricos (Ex: Strings).</td>
+<td style="text-align:left"><code>a = "Dois"</code>, <code>b = 2</code></td>
+<td style="text-align:left">O sistema deve lançar um erro de tipagem (<code>TypeError</code>) exigindo números.</td>
+<td style="text-align:left">❌ <strong>Falhou</strong> (O erro disparou, mas a mensagem foi diferente da especificada)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CT-07</strong></td>
+<td style="text-align:left">Validar a proteção ao enviar um valor nulo.</td>
+<td style="text-align:left"><code>a = null</code>, <code>b = 5</code></td>
+<td style="text-align:left">O sistema deve lançar um <code>TypeError</code>.</td>
+<td style="text-align:left">⚠️ <strong>Bloqueado</strong> (Depende de correção na tipagem do banco para testar nulos)</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Nota: Os resultados na tabela acima são simulações de uma execução real para demonstrar o preenchimento prático do plano e o acompanhamento dos testes).</em></p>
+<hr>
+<h4 id="v-gestão-de-riscos">V. Gestão de Riscos </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Risco Identificado</th>
+<th style="text-align:left">Severidade</th>
+<th style="text-align:left">Ação de Mitigação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Falta de cobertura para números decimais (ex: 5.5 + 2.1).</td>
+<td style="text-align:left">Média</td>
+<td style="text-align:left">Incluir novos Casos de Teste específicos para ponto flutuante na próxima Sprint.</td>
+</tr>
+<tr>
+<td style="text-align:left">Alteração no código quebrar testes antigos (Regressão).</td>
+<td style="text-align:left">Alta</td>
+<td style="text-align:left">Configurar execução obrigatória dos testes unitários antes de qualquer aceite de código novo (Pipeline CI/CD).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vi-ambiente-de-testes">VI. Ambiente de Testes </h4>
+<ul>
+<li><strong>Hardware/Software:</strong> Máquina de desenvolvimento local (Windows, macOS ou Linux).</li>
+<li><strong>Dependências:</strong> Node.js (v18 ou superior) e Framework Jest (v29+).</li>
+</ul>
+<h4 id="vii-parecer-final-e-observações-test-summary-report">VII. Parecer Final e Observações (Test Summary Report) </h4>
+<ul>
+<li><strong>Métricas de Execução:</strong> Foram planejados e executados 7 casos de teste. Desses, 5 passaram (71%), 1 falhou (14%) e 1 foi bloqueado (14%).</li>
+<li><strong>Observações Técnicas:</strong> O erro identificado no <code>CT-06</code> é de baixa prioridade sistêmica, referindo-se apenas a uma divergência entre a mensagem de erro textual esperada e a retornada pelo código. O <code>CT-07</code> não pôde ser executado devido à falta de configuração para entradas nulas no simulador do banco.</li>
+<li><strong>Decisão / Parecer:</strong> 🔴 <strong>NÃO APROVADO PARA PRODUÇÃO (No-Go)</strong>. É necessário corrigir a mensagem de erro (referente ao CT-06) e resolver o bloqueio do CT-07 para uma nova rodada de testes (Reteste) antes do lançamento oficial.</li>
+</ul>
+<h4 id="viii-aprovações">VIII. Aprovações </h4>
+<p>Atestamos que este documento reflete o planejamento e a execução real, em conformidade com as diretrizes de garantia de qualidade (QA) do projeto.</p>
+<ul>
+<li>
+<hr>
+<p><strong>QA Lead / Analista de Testes Responsável</strong></p>
+</li>
+<li>
+<hr>
+<p><strong>Product Owner / Gerente de Projetos</strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="desafio-prático-o-sistema-de-notas-escolares"><strong>Desafio Prático: O Sistema de Notas Escolares</strong> </h2>
+<p>Como exercício de fixação, chegou a sua vez de atuar como o Analista de Qualidade (QA) de um projeto. A sua equipe de desenvolvimento acabou de criar um pequeno módulo em JavaScript chamado <code>SistemaAlunos</code>.</p>
+<p>A regra de negócio solicitada pelo cliente foi:</p>
+<ol>
+<li>O sistema deve calcular a média aritmética de 4 notas.</li>
+<li>Com base nessa média, o sistema deve classificar a situação escolar do aluno:
+<ul>
+<li><strong>Aprovado:</strong> Média maior ou igual a 7.</li>
+<li><strong>Recuperação:</strong> Média maior ou igual a 5 e menor que 7.</li>
+<li><strong>Reprovado:</strong> Média menor que 5.</li>
+</ul>
+</li>
+</ol>
+<p>Aqui está o código desenvolvido pela sua equipe:</p>
+<h3 id="o-código-principal-sistemaalunosjs">O Código Principal (<code>sistemaAlunos.js</code>) </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">SistemaAlunos</span> <span class="token punctuation">{</span>
+    <span class="token function">calcularMedia</span><span class="token punctuation">(</span><span class="token parameter">n1<span class="token punctuation">,</span> n2<span class="token punctuation">,</span> n3<span class="token punctuation">,</span> n4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>
+            <span class="token keyword keyword-typeof">typeof</span> n1 <span class="token operator">!==</span> <span class="token string">'number'</span> <span class="token operator">||</span> <span class="token keyword keyword-typeof">typeof</span> n2 <span class="token operator">!==</span> <span class="token string">'number'</span> <span class="token operator">||</span> 
+            <span class="token keyword keyword-typeof">typeof</span> n3 <span class="token operator">!==</span> <span class="token string">'number'</span> <span class="token operator">||</span> <span class="token keyword keyword-typeof">typeof</span> n4 <span class="token operator">!==</span> <span class="token string">'number'</span>
+        <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">"Todas as notas devem ser parâmetros numéricos."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-const">const</span> notas <span class="token operator">=</span> <span class="token punctuation">[</span>n1<span class="token punctuation">,</span> n2<span class="token punctuation">,</span> n3<span class="token punctuation">,</span> n4<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-let">let</span> nota <span class="token keyword keyword-of">of</span> notas<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>nota <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nota <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"As notas devem estar entre 0 e 10."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-const">const</span> media <span class="token operator">=</span> <span class="token punctuation">(</span>n1 <span class="token operator">+</span> n2 <span class="token operator">+</span> n3 <span class="token operator">+</span> n4<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow keyword-return">return</span> <span class="token known-class-name class-name">Number</span><span class="token punctuation">(</span>media<span class="token punctuation">.</span><span class="token method function property-access">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">verificarStatus</span><span class="token punctuation">(</span><span class="token parameter">media</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> media <span class="token operator">!==</span> <span class="token string">'number'</span> <span class="token operator">||</span> media <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> media <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"A média informada é inválida."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>media <span class="token operator">&gt;=</span> <span class="token number">7.0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-return">return</span> <span class="token string">"Aprovado"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>media <span class="token operator">&gt;=</span> <span class="token number">5.0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-return">return</span> <span class="token string">"Recuperação"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword control-flow keyword-return">return</span> <span class="token string">"Reprovado"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="o-início-da-bateria-de-testes-sistemaalunostestjs">O Início da Bateria de Testes (<code>sistemaAlunos.test.js</code>) </h3>
+<p>A equipe de engenheiros mapeou os testes básicos automatizados com Jest focando apenas nos fluxos positivos (Caminho Feliz), mas você precisa completar a cobertura:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token maybe-class-name">SistemaAlunos</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./sistemaAlunos'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"Bateria de Testes - Sistema de Alunos"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-let">let</span> sistema<span class="token punctuation">;</span>
+
+    <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        sistema <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SistemaAlunos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-01 - Deve calcular a média corretamente de quatro notas válidas"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>sistema<span class="token punctuation">.</span><span class="token method function property-access">calcularMedia</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">7.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-02 - Deve retornar 'Aprovado' para media exata igual 7.0"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>sistema<span class="token punctuation">.</span><span class="token method function property-access">verificarStatus</span><span class="token punctuation">(</span><span class="token number">7.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">"Aprovado"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-03 - Deve retornar 'Recuperação' para média &gt;= 5 e &lt; 7"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>sistema<span class="token punctuation">.</span><span class="token method function property-access">verificarStatus</span><span class="token punctuation">(</span><span class="token number">6.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">"Recuperação"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-04 - Deve retornar 'Reprovado' para média &lt; 5"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>sistema<span class="token punctuation">.</span><span class="token method function property-access">verificarStatus</span><span class="token punctuation">(</span><span class="token number">4.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">"Reprovado"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-mão-na-massa-o-seu-desafio">📋 Mão na Massa: O Seu Desafio! </h3>
+<p>Sua tarefa consiste em elaborar o <strong>Plano de Testes</strong> (na forma documentada ou em tabela de CTs) contemplando todas as ramificações e situações limítrofes para garantir a segurança contra erros desse projeto.</p>
+<p><strong>Passo a passo esperado:</strong></p>
+<ol>
+<li>Leia a lógica do código e identifique as <strong>Exceções (Caminhos Negativos)</strong>. O que deverá acontecer se enviarmos uma letra na nota? Ou se inserirmos a nota <code>10.1</code>? E a nota <code>-2</code>?</li>
+<li>Escreva os cenários de teste aplicando a técnica de <strong>Análise do Valor Limite (BVA)</strong>, focando exatamente nos números das bordas das regras: <code>4.9</code>, <code>5.0</code>, <code>6.9</code>, <code>7.0</code>, <code>10.0</code> e <code>10.1</code>.</li>
+<li>Descreva no plano como você usou a técnica de <strong>Partição de Equivalência</strong> para agrupar as notas inválidas.</li>
+<li><strong>(Avançado / Opcional):</strong> Construa os scripts automatizados usando <code>expect().toThrow()</code> em Jest para simular as rotinas de erro mapeadas acima.</li>
+</ol>
+<h2 id="desafio-prático-2-testes-de-integração-e-apis-livraria"><strong>Desafio Prático 2: Testes de Integração e APIs (Livraria)</strong> </h2>
+<p>Agora que você dominou os testes unitários e lógicos da calculadora e das notas, vamos dar um passo adiante. Sua equipe backend acabou de desenvolver uma nova <strong>API Restful para Gestão de Livros</strong>.</p>
+<p>A regra de negócio solicitada pelo cliente e as rotas disponíveis são as seguintes:</p>
+<h3 id="estrutura-do-objeto-o-livro">Estrutura do Objeto (O Livro) </h3>
+<p>Quando um usuário for cadastrar um livro via API, ele deve enviar os seguintes dados:</p>
+<ul>
+<li><code>id</code>: (Número) Gerado automaticamente pelo banco de dados.</li>
+<li><code>livro</code>: (Texto/String) O título do livro. <strong>Obrigatório</strong>.</li>
+<li><code>autor</code>: (Texto/String) O nome do autor principal. <strong>Obrigatório</strong>.</li>
+<li><code>co_autores</code>: (Array/Lista de Textos) Uma lista com outros autores. <em>Opcional</em>.</li>
+<li><code>editora</code>: (Texto/String) O nome da editora do livro. <strong>Obrigatório</strong>.</li>
+</ul>
+<h3 id="rotas-da-api-disponíveis">Rotas da API Disponíveis </h3>
+<ul>
+<li><code>GET /livros</code> - Retorna a lista de todos os livros cadastrados.</li>
+<li><code>GET /livros/:id</code> - Retorna os detalhes de um livro específico pelo seu ID.</li>
+<li><code>POST /livros</code> - Cadastra um novo livro recebendo os dados em formato JSON. (Retorna o status <em>201 Created</em> em caso de sucesso).</li>
+</ul>
+<h3 id="o-código-da-api-appjs">O Código da API (<code>app.js</code>) </h3>
+<p>Abaixo está o código-fonte desenvolvido pela equipe usando Node.js e o framework Express. Repare que existem algumas validações básicas, mas será que elas protegem o sistema contra todos os problemas?</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token method function property-access">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Banco de dados simulado em memória</span>
+<span class="token keyword keyword-let">let</span> livros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-let">let</span> proximoId <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token string">'/livros'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span>livros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token string">'/livros/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> id <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token property-access">params</span><span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">erro</span><span class="token operator">:</span> <span class="token string">"Formato de ID inválido."</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword keyword-const">const</span> livro <span class="token operator">=</span> livros<span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token parameter">l</span> <span class="token arrow operator">=&gt;</span> l<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>livro<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">erro</span><span class="token operator">:</span> <span class="token string">"Livro não encontrado."</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span>livro<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token method function property-access">post</span><span class="token punctuation">(</span><span class="token string">'/livros'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> livro<span class="token punctuation">,</span> autor<span class="token punctuation">,</span> co_autores<span class="token punctuation">,</span> editora <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token property-access">body</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Validações básicas feitas pela equipe</span>
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>livro <span class="token operator">||</span> <span class="token operator">!</span>autor <span class="token operator">||</span> <span class="token operator">!</span>editora<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">erro</span><span class="token operator">:</span> <span class="token string">"Campos obrigatórios ausentes."</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> autor <span class="token operator">!==</span> <span class="token string">'string'</span> <span class="token operator">||</span> <span class="token keyword keyword-typeof">typeof</span> editora <span class="token operator">!==</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-return">return</span> res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">erro</span><span class="token operator">:</span> <span class="token string">"Autor e editora devem ser textos."</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-const">const</span> novoLivro <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">id</span><span class="token operator">:</span> proximoId<span class="token operator">++</span><span class="token punctuation">,</span>
+        livro<span class="token punctuation">,</span>
+        autor<span class="token punctuation">,</span>
+        <span class="token literal-property property">co_autores</span><span class="token operator">:</span> <span class="token known-class-name class-name">Array</span><span class="token punctuation">.</span><span class="token method function property-access">isArray</span><span class="token punctuation">(</span>co_autores<span class="token punctuation">)</span> <span class="token operator">?</span> co_autores <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        editora
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    livros<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>novoLivro<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token method function property-access">status</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span>novoLivro<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> app<span class="token punctuation">;</span>
+</code></pre><h3 id="o-início-da-bateria-de-testes-apilivrostestjs">O Início da Bateria de Testes (<code>apiLivros.test.js</code>) </h3>
+<p>Assim como no desafio anterior, a equipe programou apressadamente apenas o "Caminho Feliz" (Happy Path) e escreveu os seguintes testes de integração usando a biblioteca <code>Supertest</code> junto com o <code>Jest</code>:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> request <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'supertest'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// A nossa API rodando na máquina</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"Bateria de Testes - API de Livros"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-01 - Deve cadastrar um livro com sucesso (Status 201)"</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-const">const</span> novoLivro <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">livro</span><span class="token operator">:</span> <span class="token string">"O Senhor dos Anéis"</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">autor</span><span class="token operator">:</span> <span class="token string">"J.R.R. Tolkien"</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">co_autores</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">editora</span><span class="token operator">:</span> <span class="token string">"HarperCollins"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword keyword-const">const</span> resposta <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">post</span><span class="token punctuation">(</span><span class="token string">'/livros'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>novoLivro<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token function">expect</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">status</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">201</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">body</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-02 - Deve retornar uma lista de livros (Status 200)"</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-const">const</span> resposta <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token string">'/livros'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token function">expect</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">status</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token known-class-name class-name">Array</span><span class="token punctuation">.</span><span class="token method function property-access">isArray</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">body</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBeTruthy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"CT-03 - Deve retornar um livro específico pelo ID (Status 200)"</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-const">const</span> resposta <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">request</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token string">'/livros/1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token function">expect</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">status</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span>resposta<span class="token punctuation">.</span><span class="token property-access">body</span><span class="token punctuation">.</span><span class="token property-access">livro</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">"O Senhor dos Anéis"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-mão-na-massa-o-seu-novo-desafio">📋 Mão na Massa: O Seu Novo Desafio! </h3>
+<p>A equipe deixou várias brechas perigosas nesta API. Sua tarefa como QA é elaborar a continuação do <strong>Plano de Testes</strong> focando especificamente em testar as proteções (Caminhos Tristes / Negativos) desta integração.</p>
+<p><strong>Passo a passo esperado:</strong></p>
+<ol>
+<li>Leia a estrutura do objeto "Livro" e identifique quais campos são obrigatórios e quais os tipos de dados permitidos.</li>
+<li>Crie cenários de teste pensando no que a API deveria fazer se:
+<ul>
+<li>O usuário enviar uma requisição <code>POST /livros</code> sem informar o campo <code>livro</code> (Título)?</li>
+<li>O campo <code>autor</code> for enviado como um número matemático (<code>autor: 123</code>) em vez de um texto?</li>
+<li>O usuário tentar buscar um livro na rota <code>GET /livros/:id</code> passando um ID que não existe (ex: <code>9999</code>) ou um ID num formato inválido (ex: <code>GET /livros/abc</code>)?</li>
+</ul>
+</li>
+<li>Estruture esses novos cenários na sua tabela de Plano de Testes. Informe claramente o <strong>Dado de Entrada</strong> e, principalmente, o <strong>Resultado Esperado</strong> (Exemplo: "O sistema deve retornar status HTTP <em>400 Bad Request</em>" ou "O sistema deve retornar <em>404 Not Found</em> com mensagem de 'Livro não encontrado'").</li>
+<li><strong>(Avançado / Opcional):</strong> Tente escrever como ficaria o código automatizado em Jest/Supertest para tentar cadastrar um livro vazio e validar se a API barrou o acesso retornando o erro 400.</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
