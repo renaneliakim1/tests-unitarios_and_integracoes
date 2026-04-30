@@ -1,0 +1,341 @@
+<!DOCTYPE html><html><head>
+      <title>dubles-testes-fonte</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\NUTEC_ALUNO2\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.24-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="dominando-os-dublês-de-testes">Dominando os Dublês de Testes </h1>
+<h2 id="1-introdução-teórica-o-porquê-dos-dublês">1. Introdução Teórica: O Porquê dos Dublês </h2>
+<p>Vejamos a analogia clássica: em um filme, um dublê substitui o ator em cenas perigosas ou caras. No código, o dublê de teste (Test Double) substitui uma parte do sistema que é difícil, lenta ou impossível de lidar durante a execução dos testes automatizados, como:</p>
+<ul>
+<li>Banco de dados (não queremos alterar dados reais)</li>
+<li>APIs externas (podem estar fora do ar ou cobrar por requisições)</li>
+<li>Sistema de arquivos (leitura e escrita lentas)</li>
+</ul>
+<h3 id="os-5-tipos-de-dublês">Os 5 Tipos de Dublês </h3>
+<p>Os dublês não são todos iguais. Cada um tem um propósito específico. Veja a tabela comparativa:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tipo</th>
+<th style="text-align:left">Função Principal</th>
+<th style="text-align:left">Analogia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Dummy</strong></td>
+<td style="text-align:left">Objeto passado apenas para preencher parâmetros necessários na chamada de uma função, mas que nunca será realmente utilizado.</td>
+<td style="text-align:left">Um manequim no fundo da cena, apenas para compor o cenário.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Stub</strong></td>
+<td style="text-align:left">Objeto que fornece respostas prontas e pré-configuradas para as chamadas feitas durante o teste. Ele não responde a nada além do que foi programado.</td>
+<td style="text-align:left">Um ator figurante que só sabe dizer uma única fala decorada: "Sim" ou "Não".</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Spy</strong></td>
+<td style="text-align:left">Um "Stub" que também grava informações sobre como foi chamado (quais argumentos recebeu, quantas vezes foi invocado). Muito útil para verificar se uma função chamou outra corretamente.</td>
+<td style="text-align:left">Um espião infiltrado que anota quem entrou na sala e o que disse.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mock</strong></td>
+<td style="text-align:left">Objeto pré-programado com <em>expectativas</em> estritas de como deve ser usado. Se o mock não for chamado da forma exata que foi configurado (ex: com os parâmetros certos, o número certo de vezes), o teste falha.</td>
+<td style="text-align:left">Um roteiro rigoroso de teatro: "Você deve falar a frase X no tempo exato Y, senão a cena corta".</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Fake</strong></td>
+<td style="text-align:left">Uma implementação de fato funcional, mas simplificada ou "pequena" para ser usada no teste (ex: um banco de dados em memória, em vez de um PostgreSQL real).</td>
+<td style="text-align:left">Um cenário de papelão que funciona como uma porta de verdade, mas não leva a lugar nenhum na vida real.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entendendo-a-diferença-mock-objects-vs-dados-mockados">Entendendo a diferença: Mock Objects vs. Dados Mockados </h3>
+<p>É muito comum no dia a dia desenvolvedores dizerem "vamos mockar esses dados", mas na teoria rigorosa de testes, eles estão frequentemente criando <strong>Stubs</strong> ou <strong>Dummies</strong>. Entender a diferença é o segredo para dominar testes:</p>
+<h4 id="1-dados-mockados-foco-no-estado---o-que-a-função-precisa-ou-retorna">1. Dados Mockados (Foco no ESTADO - O que a função precisa ou retorna) </h4>
+<p>Isso é o que chamamos de <strong>Stub</strong> ou <strong>Dummy</strong>. O objetivo aqui é apenas "enganar" a função para que ela funcione sem quebrar, fornecendo a ela as informações falsas que ela exige. Você não testa o objeto falso em si.</p>
+<p><strong>Exemplo Didático:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// O Dummy/Stub: Apenas um objeto com dados falsos para a função não dar erro</span>
+<span class="token keyword keyword-const">const</span> usuarioFalso <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">nome</span><span class="token operator">:</span> <span class="token string">'João'</span><span class="token punctuation">,</span> <span class="token literal-property property">idade</span><span class="token operator">:</span> <span class="token number">25</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// O foco do teste é no resultado da função principal, e não no usuarioFalso (Estado)</span>
+<span class="token keyword keyword-const">const</span> desconto <span class="token operator">=</span> <span class="token function">calcularDesconto</span><span class="token punctuation">(</span>usuarioFalso<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>desconto<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "Dado esse usuário, o desconto gerado é 10?"</span>
+</code></pre><h4 id="2-mocks-foco-no-comportamento---o-que-a-função-faz">2. Mocks (Foco no COMPORTAMENTO - O que a função faz) </h4>
+<p>O <strong>Mock Object</strong> (ou Spy) é mais "inteligente". Você o cria não apenas para fornecer dados, mas para <strong>vigiar</strong> como o seu código interage com ele. Você o usa quando precisa testar a comunicação entre sistemas.</p>
+<p><strong>Exemplo Didático:</strong></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// O Mock: Um objeto falso que "grava" o que acontece com ele</span>
+<span class="token keyword keyword-const">const</span> emailServiceMock <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">enviarBoasVindas</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token method function property-access">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// O Jest cria uma função espiã aqui</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Ao rodar a nossa função principal, ela deve usar o serviço de e-mail por debaixo dos panos</span>
+<span class="token function">cadastrarUsuario</span><span class="token punctuation">(</span><span class="token string">'Maria'</span><span class="token punctuation">,</span> emailServiceMock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Aqui o teste não é sobre um valor retornado, mas sobre a AÇÃO (Comportamento)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>emailServiceMock<span class="token punctuation">.</span><span class="token property-access">enviarBoasVindas</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalledWith</span><span class="token punctuation">(</span><span class="token string">'Maria'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// "A função de cadastro lembrou de chamar o envio de e-mail passando 'Maria'?"</span>
+</code></pre><p><strong>Resumo da Regra de Ouro:</strong></p>
+<ul>
+<li>Quer testar <strong>o que foi gerado/retornado</strong>? Use um <strong>Stub/Dummy</strong> (foco no estado).</li>
+<li>Quer testar <strong>como algo foi chamado/executado</strong>? Use um <strong>Mock/Spy</strong> (foco no comportamento).</li>
+</ul>
+<hr>
+<h2 id="2-preparação-do-ambiente">2. Preparação do Ambiente </h2>
+<p>Para entendermos na prática, vamos iniciar um projeto simples com Node.js e a biblioteca de testes Jest.</p>
+<p>Execute os comandos abaixo no seu terminal:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Cria o diretório do projeto e entra nele</span>
+<span class="token function">mkdir</span> testes-dubles <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> testes-dubles
+
+<span class="token comment"># Inicializa o projeto Node.js com configurações padrão</span>
+<span class="token function">npm</span> init <span class="token parameter variable">-y</span>
+
+<span class="token comment"># Instala o Jest (framework de testes) e o Axios (para requisições) como dependências de desenvolvimento</span>
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev jest
+<span class="token function">npm</span> <span class="token function">install</span> axios
+</code></pre><h3 id="estrutura-de-pastas-e-arquivos">Estrutura de Pastas e Arquivos </h3>
+<p>Após criar o projeto, organize as pastas e arquivos da seguinte forma. Você pode criar os arquivos vazios agora e preenchê-los conforme avançamos no tutorial:</p>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>testes-dubles/
+├── node_modules/         # (Gerado automaticamente pelo npm)
+├── src/                  # Código fonte da nossa aplicação
+│   ├── orderService.js   # Serviço de processamento de pedidos
+│   ├── githubService.js  # Serviço que consome a API do GitHub
+│   └── paymentGate.js    # Código "feio" para o desafio (Gateway de pagamentos)
+├── tests/                # Nossos testes automatizados
+│   ├── order.test.js     # Testes do orderService
+│   ├── github.test.js    # Testes do githubService
+│   └── payment.test.js   # Arquivo para resolver o desafio
+├── package.json          # Configurações do projeto
+└── package-lock.json     # (Gerado automaticamente)
+</code></pre><p><strong>Dica:</strong> Atualize a sessão <code>scripts</code> no seu <code>package.json</code> para facilitar a execução dos testes:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"jest"</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="3-prática-parte-i-stubs-e-spies">3. Prática Parte I: Stubs e Spies </h2>
+<p><strong>Cenário:</strong> Temos uma função de finalizar compra que envia um e-mail. Não queremos disparar e-mails de verdade toda vez que rodarmos o teste, pois isso lotaria a caixa de entrada dos clientes e tornaria o teste lento.</p>
+<h3 id="o-código-srcorderservicejs">O Código (<code>src/orderService.js</code>) </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Simula um serviço de envio de e-mails</span>
+<span class="token keyword keyword-const">const</span> emailService <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">send</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> 
+    <span class="token comment">// Imagine uma conexão demorada e pesada com um servidor SMTP aqui</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Enviando e-mail real: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>msg<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Função principal que queremos testar</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">checkout</span><span class="token punctuation">(</span><span class="token parameter">cart<span class="token punctuation">,</span> email</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Regra: se o carrinho estiver vazio, não finaliza a compra</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>cart<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword control-flow keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Chama o serviço de e-mail (dependência externa)</span>
+  emailService<span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Pedido confirmado para </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>email<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Retorna sucesso</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Exporta as funções para serem usadas no teste</span>
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span> checkout<span class="token punctuation">,</span> emailService <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="o-teste-testsordertestjs">O Teste (<code>tests/order.test.js</code>) </h3>
+<p>Vamos usar o <code>jest.spyOn</code> para criar um <strong>Spy</strong> que intercepta a chamada de e-mail e também funciona como <strong>Stub</strong> (retornando <code>true</code> imediatamente em vez de executar o código original).</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Importando o módulo a ser testado e suas dependências</span>
+<span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> checkout<span class="token punctuation">,</span> emailService <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/orderService'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Deve chamar o envio de e-mail ao finalizar compra com sucesso'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Criando um Spy/Stub na função 'send' do 'emailService'</span>
+  <span class="token comment">// Ele vai interceptar a chamada e retornar "true" de forma silenciosa</span>
+  <span class="token keyword keyword-const">const</span> spy <span class="token operator">=</span> jest<span class="token punctuation">.</span><span class="token method function property-access">spyOn</span><span class="token punctuation">(</span>emailService<span class="token punctuation">,</span> <span class="token string">'send'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">mockImplementation</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Executando a função que estamos testando</span>
+  <span class="token comment">// Obs: passamos um e-mail genérico para o teste</span>
+  <span class="token keyword keyword-const">const</span> result <span class="token operator">=</span> <span class="token function">checkout</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'item1'</span><span class="token punctuation">,</span> <span class="token string">'item2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'user@exemplo.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Verifica se o comportamento interno da função ocorreu como o esperado</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Verifica se o Spy foi chamado contendo o e-mail correto (foco no COMPORTAMENTO - Mock/Spy)</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>spy<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalledWith</span><span class="token punctuation">(</span>expect<span class="token punctuation">.</span><span class="token method function property-access">stringContaining</span><span class="token punctuation">(</span><span class="token string">'user@exemplo.com'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Boas práticas: Limpa o mock após o uso para não afetar outros testes</span>
+  spy<span class="token punctuation">.</span><span class="token method function property-access">mockRestore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-prática-auxiliar-testando-o-caminho-triste-sad-path">🧠 Prática Auxiliar: Testando o caminho triste (Sad Path) </h3>
+<p>Agora é a sua vez de praticar no mesmo arquivo <code>tests/order.test.js</code>.</p>
+<p><strong>O Desafio:</strong><br>
+Escreva um novo teste para garantir que o sistema se comporta corretamente quando o usuário tenta fazer o checkout com um <strong>carrinho vazio</strong>.</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>O teste deve chamar a função <code>checkout</code> passando um array vazio <code>[]</code> como carrinho.</li>
+<li>O teste deve verificar se o retorno da função é <code>false</code>.</li>
+<li>O teste <strong>deve usar um Spy</strong> para garantir que a função <code>emailService.send</code> <strong>NÃO</strong> foi chamada (afinal, não devemos enviar e-mail se a compra não aconteceu).</li>
+</ol>
+<p><em>Dica: Você pode usar o método <code>not.toHaveBeenCalled()</code> do Jest para verificar se uma função mockada/espionada não foi executada.</em></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> checkout<span class="token punctuation">,</span> emailService <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/orderService'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Não deve enviar e-mail ao tentar finalizar compra com carrinho vazio'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Criando um Spy na função 'send' do 'emailService'</span>
+
+  <span class="token comment">// Executando a função com um carrinho vazio</span>
+
+  <span class="token comment">// Verifica o estado: a compra deve ser negada</span>
+  
+  <span class="token comment">// Verifica o comportamento: o e-mail NUNCA deve ter sido disparado</span>
+  
+  <span class="token comment">// Limpa o mock após o uso para não afetar outros testes</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="4-prática-parte-ii-mocks-com-apis-externas">4. Prática Parte II: Mocks com APIs Externas </h2>
+<p>Este é o caso de uso mais comum no mercado de trabalho: simular chamadas de rede com bibliotecas como <code>axios</code> ou a API nativa <code>fetch</code>.</p>
+<p><strong>Cenário:</strong> Criar uma função que busca os dados de um usuário na API pública do GitHub. Não queremos fazer uma requisição HTTP real no teste, pois precisamos que o teste seja rápido e não dependa de internet.</p>
+<h3 id="o-código-srcgithubservicejs">O Código (<code>src/githubService.js</code>) </h3>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Importa o axios para fazer requisições HTTP</span>
+<span class="token keyword keyword-const">const</span> axios <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Função assíncrona que busca os dados na API</span>
+<span class="token keyword keyword-async">async</span> <span class="token keyword keyword-function">function</span> <span class="token function">getUserData</span><span class="token punctuation">(</span><span class="token parameter">username</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Faz a requisição GET real para o GitHub</span>
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> axios<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://api.github.com/users/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>username<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Retorna apenas a carga de dados (data) da resposta</span>
+  <span class="token keyword control-flow keyword-return">return</span> response<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span> getUserData <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="o-teste-testsgithubtestjs">O Teste (<code>tests/github.test.js</code>) </h3>
+<p>Aqui, vamos mockar o módulo inteiro do Axios. O Jest substituirá as funções originais do Axios por simulações controláveis.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Importa o axios (que será mockado)</span>
+<span class="token keyword keyword-const">const</span> axios <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Importa a função que vamos testar</span>
+<span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> getUserData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/githubService'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Informa ao Jest para mockar todo o módulo 'axios'</span>
+jest<span class="token punctuation">.</span><span class="token method function property-access">mock</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Deve retornar dados do usuário mockados sem fazer requisição real'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1. Preparação (Arrange): Criação do nosso STUB (Dados Mockados)</span>
+  <span class="token keyword keyword-const">const</span> mockUser <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Freedson'</span><span class="token punctuation">,</span> <span class="token literal-property property">bio</span><span class="token operator">:</span> <span class="token string">'Developer'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Configura o comportamento do Mock (O que o axios.get vai retornar quando for chamado)</span>
+  <span class="token comment">// Como axios.get retorna uma Promise, usamos mockResolvedValue</span>
+  axios<span class="token punctuation">.</span><span class="token property-access">get</span><span class="token punctuation">.</span><span class="token method function property-access">mockResolvedValue</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> mockUser <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 2. Ação (Act): Chamamos a nossa função</span>
+  <span class="token keyword keyword-const">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">getUserData</span><span class="token punctuation">(</span><span class="token string">'freedson'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// 3. Verificação (Assert): Comparamos os resultados</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">'Freedson'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Testa o retorno</span>
+  
+  <span class="token comment">// Verifica o COMPORTAMENTO: Garante que a API foi chamada exatamente 1 vez</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>axios<span class="token punctuation">.</span><span class="token property-access">get</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalledTimes</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// Verifica se foi chamado com a URL correta</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>axios<span class="token punctuation">.</span><span class="token property-access">get</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalledWith</span><span class="token punctuation">(</span><span class="token string">'https://api.github.com/users/freedson'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="-prática-auxiliar-simulando-uma-falha-na-api-caminho-triste">🧠 Prática Auxiliar: Simulando uma falha na API (Caminho Triste) </h3>
+<p>Ainda no arquivo <code>tests/github.test.js</code>, vamos criar um teste para o caso onde a API do GitHub falha ou o usuário não existe.</p>
+<p><strong>O Desafio:</strong><br>
+Escreva um teste que simule um erro na requisição HTTP e garanta que o nosso código de teste consiga capturar e lidar com a rejeição da Promise.</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Configure o mock do <code>axios.get</code> para <strong>rejeitar</strong> a chamada com um erro (ex: <code>new Error('Not Found')</code>).</li>
+<li>Chame a função <code>getUserData</code> com um usuário inválido.</li>
+<li>Utilize o Jest para verificar se a chamada da função resultou na rejeição (erro) esperada.</li>
+</ol>
+<p><em>Dica: Você pode simular erros em promessas mockadas usando <code>axios.get.mockRejectedValue(new Error('Not Found'))</code>. Para verificar exceções assíncronas no Jest, você pode usar a sintaxe <code>await expect(suaFuncao()).rejects.toThrow();</code>.</em></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> axios <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> getUserData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/githubService'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Mockando todo o módulo do axios</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Deve lançar erro ao simular falha na API do GitHub'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1. Preparação (Arrange): Configura o Mock para rejeitar a Promise com um erro</span>
+
+  <span class="token comment">// 2 e 3. Ação e Verificação (Act &amp; Assert): Verifica se a função propaga o erro</span>
+  <span class="token comment">// Note que em Jest, ao testar exceções assíncronas, usamos .rejects.toThrow()</span>
+  
+  <span class="token comment">// Opcional: Verifica se a URL chamada foi a esperada</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="5-desafio-prático">5. Desafio Prático </h2>
+<p>Agora é a sua vez! Abaixo, temos um código que foi escrito de uma forma que dificulta a realização de testes unitários limpos. Ele processa pagamentos e possui regras de negócio embutidas ao gateway.</p>
+<p><strong>O Arquivo:</strong> <code>src/paymentGate.js</code></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Gateway de pagamentos simulado (difícil de testar sem mocks)</span>
+<span class="token keyword keyword-const">const</span> gateway <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">authorize</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">amount</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Imagina que isso chama uma API bancária real e cobra dinheiro de verdade</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[ALERTA] Processando cobrança real de R$</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>amount<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">'authorized'</span><span class="token punctuation">,</span> <span class="token literal-property property">transactionId</span><span class="token operator">:</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Função de negócio acoplada ao gateway de forma direta</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">processPayment</span><span class="token punctuation">(</span><span class="token parameter">amount</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Valor inválido'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Regra de negócio: pagamentos acima de 1000 reais exigem análise manual, </span>
+  <span class="token comment">// então NÃO devem ir para o gateway.</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>amount <span class="token operator">&gt;</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token string">'pending_manual_review'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Se for &lt;= 1000, autoriza diretamente no gateway</span>
+  <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> gateway<span class="token punctuation">.</span><span class="token method function property-access">authorize</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">===</span> <span class="token string">'authorized'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token string">'success'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token string">'failed'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span> processPayment<span class="token punctuation">,</span> gateway <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="o-que-você-deve-fazer">O que você deve fazer: </h3>
+<p>Crie o arquivo <code>tests/payment.test.js</code> e escreva dois testes para a função <code>processPayment</code>:</p>
+<ol>
+<li><strong>Teste 1:</strong> Se o valor for <code>1500</code> (maior que 1000), o teste deve garantir que a função retorna <code>'pending_manual_review'</code> E que o método <code>gateway.authorize</code> <strong>não</strong> foi chamado em hipótese alguma (use um Spy para verificar isso).</li>
+<li><strong>Teste 2:</strong> Se o valor for <code>500</code> (menor ou igual a 1000), o teste deve mockar o <code>gateway.authorize</code> para retornar uma resposta de sucesso simulada (<code>{ status: 'authorized' }</code>) e garantir que a função retorna <code>'success'</code>.</li>
+</ol>
+<p><strong>Dica:</strong> Use <code>jest.spyOn(gateway, 'authorize')</code>. Lembre-se de usar o método <code>mockClear()</code> do seu spy entre um teste e outro para evitar que as contagens de chamadas se misturem!</p>
+<hr>
+<h2 id="considerações-finais">Considerações Finais </h2>
+<ul>
+<li><strong>Mocks e Stubs testam coisas diferentes:</strong> Mocks validam a comunicação entre os componentes (comportamento). Stubs validam a lógica interna baseada em um cenário controlado (estado).</li>
+<li><strong>Cuidado com o Excesso de Mocks:</strong> Avise que mockar <em>tudo</em> pode esconder bugs de integração cruciais. Se você mockar o banco de dados e a API ao mesmo tempo, você só estará testando a sua imaginação, e não se os componentes realmente conversam bem na vida real.</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
